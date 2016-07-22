@@ -1,17 +1,12 @@
 def alphabetize(arr)
   # code here
   #sorted_arr = []
-  esperanto_arr = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz".chars
-  #arr.each do |word|
-  #  esperanto_arr.each do |letter|
-  #    if word[0] == letter
-  #      sorted_arr << word
-  #    end
-  #  end
-  #end
+  esperanto_arr = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz".chars # or...
+  #esperanto_arr = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz".each_char.with_index.to_h
   arr.sort_by do |phrase|
     phrase.chars.map do |character|
-      esperanto_arr.index(character)
+      esperanto_arr.index(character) # or...
+      #esperanto_arr[c]
     end
   end
   #return sorted_arr
